@@ -31,10 +31,3 @@ class EatonEasy:
         except ValueError:
             print ('JSON Decoding failed')
         return r
-
-
-plc = EatonEasy("http://192.168.1.242/","500850d1f316d1a813f8b4db6a6f8bec8d43bfb82b05983936ecb42de8bd824545326df9d31321af")
-
-print(plc.isRunning())
-plc.setOp("M", 15, 0)
-print(plc.getElm("M", 15))
